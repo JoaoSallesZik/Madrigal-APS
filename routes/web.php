@@ -15,6 +15,7 @@ Route::group(['namespace' => 'Painel'], function(){
 
 
 Route::get('/Painel', 'PainelController@index')->name('Painel.index');
+Route::get('/Painel/Fundadores', 'PainelController@viewDireitos')->name('Painel.Fundadores');
 
 Route::get('/Painel/Usuarios', 'PainelController@viewUsuario')->name('Painel.Usuarios.index');
 Route::get('/Painel/Usuarios/Create','PainelController@createUsuario')->name('Painel.Usuarios.create');

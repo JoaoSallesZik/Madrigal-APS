@@ -64,6 +64,12 @@ class PainelController extends Controller
         return view('Painel.Estagios.index', compact('user', 'estagios'));
     }
 
+    public function viewDireitos()
+    {
+        $user = Auth()->User();
+        return view('Painel.Fundadores', compact('user',));
+    }
+
    
 
    

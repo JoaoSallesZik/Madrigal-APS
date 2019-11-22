@@ -12,7 +12,7 @@
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
-          <img src="{{asset ('AdminLTE/dist/img/AdminLTELogo.png')}}" class="img-circle elevation-2" alt="User Image"> <!-- logo -->
+          <img src="{{asset ('AdminLTE/dist/img/usermsn.png')}}" class="img-circle elevation-2" alt="User Image"> <!-- logo -->
         </div>
         <div class="info">
           <a href="#" class="d-block">{{ $user->name }}</a>  <!-- nome user logado-->
@@ -34,33 +34,37 @@
              </li>
               <li class="nav-item">     
                 <a href="{{route('Painel.Alunos.index')}}" class="nav-link ">
-                  <i class="fas fa-user-graduate nav-icon"></i>
+                  <i class="fas fa-address-card nav-icon"></i>
                   <p>Alunos</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="{{route('Painel.Empresas.index')}}" class="nav-link">
-                  <i class="far fa-building nav-icon"></i>
+                  <i class="fas fa-store nav-icon"></i>
                   <p>Empresas</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="{{route('Painel.Estagios.index')}}" class="nav-link">
-                  <i class="fab fa-phoenix-framework nav-icon"></i>
+                  <i class="fas fa-user-graduate nav-icon"></i>
                   <p>Estágios</p>
                 </a>
               </li>
             </ul>
           </li>
           <li class="nav-item">
-            <a href="" class="nav-link">
-              <i class="nav-icon fas fa-sign-out-alt"></i>
+            <a href="{{ route('logout') }}" class="nav-link"
+            onclick="event.preventDefault(); document.getElementById('logout-form').submit();"> <i class="nav-icon fas fa-sign-out-alt"></i>
               <p>
                 Sair
                 <span class="right badge badge-danger">Deslogar</span>
               </p>
             </a>
+             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        @csrf
+          </form>
           </li>
+
           
         </ul>
       </nav>
