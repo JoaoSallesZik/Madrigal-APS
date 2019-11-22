@@ -28,6 +28,7 @@
                       <th>Telefone</th>
                       <th>Email</th>
                       <th>Data de Criação </th>
+                      <th>Editado há</th>
                       <th>Ações</th>
                     </tr>
                   </thead>
@@ -35,12 +36,13 @@
                   @foreach($empresas as $empresa)
                     <tr>
                       <td>{{$empresa->id}}</td>
-                      <td>{{$empresa->nomeEmpresa}}</td>
+                      <td>{{$empresa->nomeEmpresa}}</td>    
                       <td>{{$empresa->CNPJ}}</td>
                       <td>{{$empresa->endereco}}</td>
                       <td>{{$empresa->telefone}}</td>
                       <td>{{$empresa->email}}</td>
                       <td>{{$empresa->created_at->diffForHumans()}}</td>
+                      <td>{{$empresa->updated_at->diffForHumans()}}</td>
                       <td>
                         <a href="{{route('Painel.Empresas.edit', $empresa->id)}}" class="btn btn-warning"><i class="fa fa-edit"></i></a>
                         <form method="POST" action="{{ route('Painel.Empresas.destroy', $empresa->id) }}">  <br>

@@ -31,6 +31,7 @@
                       <th>Hora de Saída</th>
                       <th>Horas Realizadas</th>
                       <th>Data de criação</th>
+                      <th>Editado há</th>
                       <th>Ações</th>
                     </tr>
                   </thead>
@@ -47,6 +48,7 @@
                         <td>{{$estagio->horaSaida}}</td>
                          <td>{{$estagio->horasRealizadas}}</td>
                       <td>{{$estagio->created_at->diffForHumans()}}</td>
+                      <td>{{$estagio->updated_at->diffForHumans()}}</td>
                       <td>
                         <a href="{{route('Painel.Estagios.edit', $estagio->id)}}" class="btn btn-warning"><i class="fa fa-edit"></i></a>
                         <form method="POST" action="{{ route('Painel.Estagios.destroy', $estagio->id) }}">  <br>

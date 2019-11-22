@@ -27,8 +27,9 @@
                       <th>Periodo</th>
                       <th>CPF</th>
                       <th>Endereço</th>
-                      <th>Data de Criação</th>
                       <th>Email</th>
+                      <th>Data de Criação</th>
+                      <th>Editado há</th>
                       <th>Ações</th>
                     </tr>
                   </thead>
@@ -41,8 +42,9 @@
                       <td>{{$aluno->periodo}}</td>
                       <td>{{$aluno->CPF}}</td>
                       <td>{{$aluno->endereco}}</td>
-                      <td>{{$aluno->created_at->diffForHumans()}}</td>
                       <td>{{$aluno->email}}</td>
+                      <td>{{$aluno->created_at->diffForHumans()}}</td>
+                      <td>{{$aluno->updated_at->diffForHumans()}}</td>
                       <td>
                         <a href="{{route('Painel.Alunos.edit', $aluno->id)}}" class="btn btn-warning"><i class="fa fa-edit"></i></a>
                         <form method="POST" action="{{ route('Painel.Alunos.destroy', $aluno->id) }}">  <br>
