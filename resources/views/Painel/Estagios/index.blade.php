@@ -30,7 +30,7 @@
                       <th>Hora de Entrada </th>
                       <th>Hora de Saída</th>
                       <th>Horas Realizadas</th>
-                      <th>Criado Há</th>
+                      <th>Data de criação</th>
                       <th>Ações</th>
                     </tr>
                   </thead>
